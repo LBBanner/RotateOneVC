@@ -41,50 +41,41 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 -(UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
     
     NSUInteger orientations = UIInterfaceOrientationMaskAllButUpsideDown;
-    
     if(self.window.rootViewController){
-        //取出当前控制器
+        //取出当前显示的控制器
         UIViewController *presentedViewController = [self topViewControllerWithRootViewController:self.window.rootViewController];
-        //按当前控制器支持的方向确定旋转方向
+        //按当前控制器支持的方向确定旋转方向(将旋转方向重新交给每个控制器自己控制)
         orientations = [presentedViewController supportedInterfaceOrientations];
-        
     }
-
     return orientations;
-    
 }
 
 
 
 - (UIViewController*)topViewControllerWithRootViewController:(UIViewController*)rootViewController {
-    //循环,直到找到当前控制器
+    //逐层循环判断,直到找到当前最顶的控制器
     if ([rootViewController isKindOfClass:[UITabBarController class]]) {
         
         UITabBarController* tabBarController = (UITabBarController*)rootViewController;
-        
         return [self topViewControllerWithRootViewController:tabBarController.selectedViewController];
         
     } else if ([rootViewController isKindOfClass:[UINavigationController class]]) {
         
         UINavigationController* navigationController = (UINavigationController*)rootViewController;
-        
         return [self topViewControllerWithRootViewController:navigationController.visibleViewController];
         
-    } else if (rootViewController.presentedViewController) {
+    } else if (rootViewController.presentedViewController) {//如果是modal出来的
         
         UIViewController* presentedViewController = rootViewController.presentedViewController;
-        
         return [self topViewControllerWithRootViewController:presentedViewController];
         
     } else {
-        
         return rootViewController;
-        
     }
-    
 }
 
 

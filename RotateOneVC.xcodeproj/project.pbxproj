@@ -231,7 +231,7 @@
 				TargetAttributes = {
 					6C1C810A1D6074C80090E978 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = T59W99K34W;
+						DevelopmentTeam = 7448PDV238;
 					};
 					6C1C81231D6074C80090E978 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -446,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RotateOneVC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bai.RotateOneVC;
@@ -457,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RotateOneVC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bai.RotateOneVC;
@@ -529,6 +531,7 @@
 				6C1C813A1D6074C90090E978 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C1C813B1D6074C90090E978 /* Build configuration list for PBXNativeTarget "RotateOneVCTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +540,7 @@
 				6C1C813D1D6074C90090E978 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C1C813E1D6074C90090E978 /* Build configuration list for PBXNativeTarget "RotateOneVCUITests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +549,7 @@
 				6C1C81401D6074C90090E978 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

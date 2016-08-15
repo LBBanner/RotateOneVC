@@ -4,7 +4,7 @@
 //
 //  Created by CoderXu on 16/8/14.
 //  Copyright © 2016年 CoderXu. All rights reserved.
-//
+//  自动切换控制器
 
 #import "AutoRotateViewController.h"
 #import "PortraitBaseViewController.h"
@@ -24,6 +24,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//支持所有方向
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskAll;
 }

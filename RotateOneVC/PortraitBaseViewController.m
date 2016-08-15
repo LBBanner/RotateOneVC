@@ -4,7 +4,7 @@
 //
 //  Created by CoderXu on 16/8/14.
 //  Copyright © 2016年 CoderXu. All rights reserved.
-//
+//  竖屏控制器,可作为父类
 
 #import "PortraitBaseViewController.h"
 
@@ -26,6 +26,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//只支持竖屏
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskPortrait;
 }
